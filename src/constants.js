@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'gatsby';
-
 export const COLOR = {
   WHITE: '#ffffff',
   BLACK: '#000000',
@@ -8,10 +5,8 @@ export const COLOR = {
   BLUE: '#1a58cc',
 };
 
-const navItems = [{ to: '/', label: 'Index' }, { to: '/page-2', label: 'Page 2' }];
-
-export const GLOBAL_NAV = navItems.map(({ to, label }) => (
-  <Link key={label} to={to}>
-    {label}
-  </Link>
-));
+export const NAV_ITEMS = [
+  { to: '/', label: 'Index' },
+  { to: '/page-2', label: 'Page 2' },
+  { to: '/i-dont-exist', label: '404 Page' },
+];
