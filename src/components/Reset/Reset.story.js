@@ -163,8 +163,9 @@ This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
 `;
 
-storiesOf('Components|Reset', module)
+const story = storiesOf('Components|Reset', module)
   .addDecorator(checkA11y)
   .addDecorator(withInfo)
-  .addParameters(defaultParameters)
-  .add('Test Elements', () => <Markdown source={sample} />);
+  .addParameters(defaultParameters);
+
+story.add('Test Elements', () => <Markdown source={sample} />);

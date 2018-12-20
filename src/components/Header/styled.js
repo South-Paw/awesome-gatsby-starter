@@ -5,6 +5,7 @@ import { COLOR } from '../../constants';
 
 export const HeaderWrapper = styled.div`
   background-color: ${COLOR.REBECCA_PURPLE};
+  border-bottom: 0.2rem solid ${darken(0.2, COLOR.REBECCA_PURPLE)};
 `;
 
 export const HeaderInner = styled.div`

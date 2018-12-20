@@ -1,7 +1,7 @@
 {
   "name": "awesome-gatsby-starter",
   "version": "1.0.0",
-  "description": "A starter for GatsbyJS with a preconfigured ESLint, Storybook and Jest environment.",
+  "description": "A starter for GatsbyJS with a preconfigured MDX, Storybook and ESLint environment.",
   "keywords": [
     "gatsby",
     "gatsby-starter"
@@ -30,12 +30,16 @@
     "storybook:build": "build-storybook -c .storybook -o public/docs"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^0.16.6",
+    "@mdx-js/tag": "^0.16.6",
     "gatsby": "^2.0.72",
     "gatsby-image": "^2.0.25",
+    "gatsby-mdx": "^0.2.0",
     "gatsby-plugin-manifest": "^2.0.12",
     "gatsby-plugin-offline": "^2.0.20",
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-sharp": "^2.0.15",
+    "gatsby-plugin-styled-components": "^3.0.4",
     "gatsby-source-filesystem": "^2.0.12",
     "gatsby-transformer-sharp": "^2.1.9",
     "polished": "^2.3.1",

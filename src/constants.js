@@ -8,5 +8,6 @@ export const COLOR = {
 export const NAV_ITEMS = [
   { to: '/', label: 'Index' },
   { to: '/page-2', label: 'Page 2' },
-  { to: '/i-dont-exist', label: '404 Page' },
+  { to: '/mdx-example', label: 'Markdown Example' },
+  { href: '/docs/', label: 'Storybook' },
 ];

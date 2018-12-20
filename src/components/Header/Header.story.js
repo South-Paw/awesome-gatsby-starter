@@ -10,8 +10,9 @@ const props = {
   title: 'My Cool Component',
 };
 
-storiesOf('Components|Header', module)
+const story = storiesOf('Components|Header', module)
   .addDecorator(checkA11y)
   .addDecorator(withInfo)
-  .addParameters(defaultParameters)
-  .add('Header Component', () => <Header {...props} />, documentationConfig);
+  .addParameters(defaultParameters);
+
+story.add('Header Component', () => <Header {...props} />, documentationConfig);

@@ -9,11 +9,21 @@ import { ResetStyle } from '../Reset';
 import { NAV_ITEMS } from '../../constants';
 
 const Layout = ({ children }) => {
-  const navigationItems = NAV_ITEMS.map(({ to, label }) => (
-    <Link key={label} to={to}>
-      {label}
-    </Link>
-  ));
+  const navigationItems = NAV_ITEMS.map(({ to, href, label }) => {
+    if (href) {
+      return (
+        <a key={label} href={href}>
+          {label}
+        </a>
+      );
+    }
+
+    return (
+      <Link key={label} to={to}>
+        {label}
+      </Link>
+    );
+  });
 
   return (
     <StaticQuery

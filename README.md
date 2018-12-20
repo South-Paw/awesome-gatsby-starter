@@ -1,13 +1,14 @@
 # awesome-gatsby-starter
 
-👌 A starter for GatsbyJS with a preconfigured ESLint and Storybook environment.
+👌 A starter for GatsbyJS with a preconfigured MDX, Storybook and ESLint environment.
 
+[![Live Demo](https://img.shields.io/badge/netlify-live_demo-1e9498.svg)](https://awesome-gatsby-starter.netlify.com/)
 [![Dependencies](https://david-dm.org/South-Paw/awesome-gatsby-starter/status.svg)](https://david-dm.org/South-Paw/awesome-gatsby-starter)
 [![Dev Dependencies](https://david-dm.org/South-Paw/awesome-gatsby-starter/dev-status.svg)](https://david-dm.org/South-Paw/awesome-gatsby-starter?type=dev)
 
 ## Rational
 
-If you've ever started building a larger website with [GatsbyJS](https://www.gatsbyjs.org) which has multiple different UI elements and patterns, you may have ended up in a similar place I found myself - with some pretty massive component sprawl where each component picks up more and more concerns, slowly becoming overloaded or duplicated. So I decided to try solve it by utilising storybook and building the required UI components up front in isolation before using them in the Gatsby site.
+If you've ever started building a larger website with [GatsbyJS](https://www.gatsbyjs.org) which has multiple different UI elements and patterns, you may have ended up in a similar place I found myself - with some pretty massive component sprawl where each component picks up more and more concerns, slowly becoming overloaded or duplicated. So I decided to try solve it by utilising [Storybook](https://storybook.js.org) and building the required UI components up front in isolation before using them in the Gatsby site.
 
 What I ended up finding with this workflow was that this is a useful way of thinking about each websites UI; as a collection of components rather than one standard layout that does everything with a few bits on the side (...much like how we all build/think about React apps as well).
 
@@ -17,11 +18,12 @@ While this starter may be somewhat opinionated for what I want out of my Gatsby 
 
 ## Features
 
-* [ESLint](https://eslint.org/) with [Airbnb's config](https://www.npmjs.com/package/eslint-config-airbnb)
-* [Prettier](https://prettier.io/) integrated into ESLint
+* [Gatsby MDX](https://github.com/ChristopherBiscardi/gatsby-mdx) for JSX in Markdown loading, parsing, and rendering of pages
 * [Storybook](https://storybook.js.org/) for isolated component development
 * [styled-components](https://www.styled-components.com/) for CSS-in-JS
-* A few example components with stories and site structure
+* [ESLint](https://eslint.org/) with [Airbnb's config](https://www.npmjs.com/package/eslint-config-airbnb)
+* [Prettier](https://prettier.io/) integrated into ESLint
+* A few example components and pages with stories and simple site structure
 
 ## Getting started
 

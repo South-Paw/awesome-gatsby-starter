@@ -12,8 +12,8 @@ addDecorator(GlobalStyleDecorator);
 
 // If you'd like to customize your storybook instance. See: https://github.com/storybooks/storybook/tree/next/addons/options
 addDecorator(withOptions({
-  // name: 'Custom Name Here',
-  // url: 'http://example.com',
+  name: 'awesome-gatsby-starter',
+  url: 'https://awesome-gatsby-starter.netlify.com/',
   hierarchySeparator: /\/|\./,
   hierarchyRootSeparator: /\|/,
 }));

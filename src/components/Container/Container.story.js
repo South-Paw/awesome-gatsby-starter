@@ -6,8 +6,9 @@ import { withInfo } from '@storybook/addon-info';
 import { defaultParameters, documentationConfig } from '../../../.storybook/constants';
 import { Container } from './index';
 
-storiesOf('Components|Container', module)
+const story = storiesOf('Components|Container', module)
   .addDecorator(checkA11y)
   .addDecorator(withInfo)
-  .addParameters(defaultParameters)
-  .add('Container Component', () => <Container isDebug />, documentationConfig);
+  .addParameters(defaultParameters);
+
+story.add('Container Component', () => <Container isDebug />, documentationConfig);
