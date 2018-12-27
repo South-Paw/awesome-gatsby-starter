@@ -68,7 +68,7 @@ yarn storybook:build
 
 ## License
 
-This project is licensed under [MIT](https://github.com/South-Paw/react-vector-maps/blob/master/LICENSE)
+This project is licensed under [MIT](https://github.com/South-Paw/awesome-gatsby-starter/blob/master/LICENSE)
 
 ```
 The MIT License (MIT)
