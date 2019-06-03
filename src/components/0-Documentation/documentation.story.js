@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import GatsbyAstronaut from '../../assets/gatsby-astronaut.png';
 
-const story = storiesOf('Documentation', module);
+const story = storiesOf('Documentation|Readme', module);
 
 story.add('Introduction', () => (
   <>

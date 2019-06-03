@@ -64,6 +64,9 @@ yarn build
 
 # build static storybook (outputs to `public/docs` folder)
 yarn storybook:build
+
+# serve locally (after building)
+yarn serve
 ```
 
 ## License

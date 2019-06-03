@@ -11,12 +11,14 @@ const Wrapper = styled.div`
 
 const Container = ({ children, ...props }) => <Wrapper {...props}>{children}</Wrapper>;
 
-Container.defaultProps = {
-  isDebug: false,
+Container.propTypes = {
+  children: PropTypes.node,
+  isDebug: PropTypes.bool,
 };
 
-Container.propTypes = {
-  isDebug: PropTypes.bool,
+Container.defaultProps = {
+  children: null,
+  isDebug: false,
 };
 
 export { Container };
