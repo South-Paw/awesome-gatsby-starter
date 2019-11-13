@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
+    "@storybook/addon-actions": "^5.2.6",
     "@storybook/addon-docs": "^5.2.6",
     "@storybook/react": "^5.2.6",
     "babel-eslint": "^10.0.3",
