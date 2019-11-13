@@ -1,21 +1,20 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
-import { Layout } from '../components/Layout';
-import Image from './image';
+import { Site } from '../components/Site';
+import { Container } from '../components/ui/Container';
 
-const IndexPage = () => (
-  <Layout>
-    <h1>Hi there!</h1>
-    <p>
-      <strong>Thanks for using awesome-gatsby-starter!</strong> Remember to{' '}
-      <a href="https://github.com/South-Paw/awesome-gatsby-starter">drop a ⭐ on the project</a> if you find it useful.
-    </p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+import Readme from '../../README.md';
+
+const seo = {
+  title: 'Home',
+};
+
+const IndexPage = ({ ...other }) => (
+  <Site seo={seo} {...other}>
+    <Container>
+      <Readme />
+    </Container>
+  </Site>
 );
 
 export default IndexPage;
