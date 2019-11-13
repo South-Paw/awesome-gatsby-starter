@@ -1,10 +1,18 @@
-import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Container = styled.div`
-  margin: 0 auto;
-  padding: 0 24px;
-  max-width: 800px;
-  width: 100%;
-`;
+import { StyledContainer } from './styled';
+
+const Container = ({ children, maxWidth }) => <StyledContainer maxWidth={maxWidth}>{children}</StyledContainer>;
+
+Container.propTypes = {
+  children: PropTypes.node,
+  maxWidth: PropTypes.number,
+};
+
+Container.defaultProps = {
+  children: null,
+  maxWidth: 800,
+};
 
 export { Container };

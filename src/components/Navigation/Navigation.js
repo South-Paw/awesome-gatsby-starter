@@ -1,67 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { uid } from 'react-uid';
 
 import { Container } from '../ui/Container';
-
-const StyledNavigation = styled.nav`
-  height: 56px;
-  display: flex;
-  align-items: center;
-  background-color: #663399;
-  color: #fff;
-  overflow: hidden;
-`;
-
-const Nav = styled.div`
-  display: flex;
-  flex-flow: nowrap row;
-`;
-
-const Brand = styled.div`
-  margin: 0;
-  margin-right: 32px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 900;
-`;
-
-const Items = styled.div`
-  margin: 0;
-  margin-right: auto;
-  display: flex;
-  flex-flow: nowrap row;
-  align-items: center;
-`;
-
-const Item = styled(({ isActive, ...other }) => <Link {...other} />)`
-  margin-right: 16px;
-  color: #fff;
-  font-weight: 500;
-  opacity: ${p => (p.isActive ? '1' : '0.6')};
-  text-decoration: none;
-
-  :hover {
-    opacity: 1;
-    text-decoration: none;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-`;
-
-const Social = styled.div`
-  margin: 0;
-  display: flex;
-  flex-flow: nowrap row;
-  align-items: center;
-`;
+import { StyledNavigation, Inner, Brand, Nav, Item, Social } from './styled';
 
 const items = [
   { label: 'Home', to: '/' },
@@ -100,10 +43,10 @@ const Navigation = ({ path }) => {
 
   return (
     <StyledNavigation>
-      <Container>
-        <Nav>
-          <Brand>{name}</Brand>
-          <Items>
+      <Container maxWidth={1200}>
+        <Inner>
+          <Brand to="/">{name}</Brand>
+          <Nav>
             {items.map(({ label, to, href }) =>
               to ? (
                 <Item key={uid(label)} to={to} isActive={to === path}>
@@ -115,7 +58,7 @@ const Navigation = ({ path }) => {
                 </Item>
               ),
             )}
-          </Items>
+          </Nav>
           <Social>
             {social.map(({ label, href }) => (
               <Item key={uid(label)} as="a" href={href} style={{ lineHeight: 0 }}>
@@ -123,7 +66,7 @@ const Navigation = ({ path }) => {
               </Item>
             ))}
           </Social>
-        </Nav>
+        </Inner>
       </Container>
     </StyledNavigation>
   );
