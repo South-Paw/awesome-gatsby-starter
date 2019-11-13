@@ -1,12 +1,14 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import { Site } from '.';
 
-const { add } = storiesOf('Components|Site', module);
+export default {
+  title: 'Components|Site',
+  component: Site,
+};
 
-add('simple', () => (
+export const simple = () => (
   <Site seo={{}} location={{ pathname: '' }}>
     [site children]
   </Site>
-));
+);

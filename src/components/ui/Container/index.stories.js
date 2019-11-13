@@ -1,8 +1,10 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import { Container } from '.';
 
-const { add } = storiesOf('UI|Container', module);
+export default {
+  title: 'UI|Container',
+  component: Container,
+};
 
-add('light', () => <Container>[container children]</Container>);
+export const simple = () => <Container>[container children]</Container>;

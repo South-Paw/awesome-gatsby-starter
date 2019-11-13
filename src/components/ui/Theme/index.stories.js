@@ -1,8 +1,10 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import { Theme } from '.';
 
-const { add } = storiesOf('UI|Theme', module);
+export default {
+  title: 'UI|Theme',
+  component: Theme,
+};
 
-add('light', () => <Theme>[layout children]</Theme>);
+export const simple = () => <Theme>[theme children]</Theme>;

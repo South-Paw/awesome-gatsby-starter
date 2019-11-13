@@ -1,8 +1,10 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import { Navigation } from '.';
 
-const { add } = storiesOf('Components|Navigation', module);
+export default {
+  title: 'Components|Navigation',
+  component: Navigation,
+};
 
-add('simple', () => <Navigation />);
+export const simple = () => <Navigation />;
