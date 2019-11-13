@@ -8,8 +8,8 @@
 
 ## Features
 
-- [Gatsby MDX](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/) for JSX in Markdown loading, parsing, and rendering of pages
-- [Storybook](https://storybook.js.org/) for isolated component development
+- [Gatsby MDX](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/) for creation of pages with Markdown + JSX
+- [Storybook](https://storybook.js.org/) with the Storybook Docs addon and support for components that use Gatsby components such as Link and StaticQuery
 - [styled-components](https://www.styled-components.com/) for CSS-in-JS
 - [ESLint](https://eslint.org/) with [Airbnb's config](https://www.npmjs.com/package/eslint-config-airbnb)
 - [Prettier](https://prettier.io/) integrated into ESLint
