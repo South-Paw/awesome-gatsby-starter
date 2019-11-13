@@ -47,4 +47,9 @@ export const BaseCSS = createGlobalStyle`
       margin-bottom: 8px;
     }
   }
+
+  pre {
+    max-width: 100%;
+    overflow: auto;
+  }
 `;

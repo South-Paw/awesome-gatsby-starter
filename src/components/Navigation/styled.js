@@ -50,7 +50,7 @@ export const Nav = styled.div`
   @media (max-width: 648px) {
     margin: 0 -24px;
     justify-content: center;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 `;
 
