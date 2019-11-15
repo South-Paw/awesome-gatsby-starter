@@ -1,26 +1,26 @@
 module.exports = {
   root: true,
-  extends: ['airbnb', 'plugin:prettier/recommended'],
   parser: 'babel-eslint',
-  env: {
-    browser: true,
-  },
+  extends: ['airbnb', 'plugin:prettier/recommended'],
+  plugins: ['react', 'prefer-object-spread', 'compat'],
   globals: {
-    shallow: false,
-    render: false,
-    mount: false,
     graphql: false,
   },
-  plugins: ['react', 'prefer-object-spread', 'compat'],
   rules: {
     // Prettier warnings
     'prettier/prettier': 'warn',
 
-    // Turn of preference of default export, allows for barrel exporting of components
+    // Suggested import order for packages
+    'import/order': ['error', { groups: [['builtin', 'external', 'internal']] }],
+
+    // Turn of preference of default export
     'import/prefer-default-export': 'off',
 
     // JSX allowed in .js files
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+
+    // Allow props spreading on components
+    'react/jsx-props-no-spreading': 'off',
 
     // Disable the formatting of JSX elements (it doesn't always know whats best!)
     'react/jsx-one-expression-per-line': 'off',
@@ -33,10 +33,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.story.js', '**/components/**/examples/*.js'],
+      files: ['**/*.stories.js'],
       rules: {
-        'import/no-extraneous-dependencies': 'off'
-      }
-    }
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
   ],
 };
