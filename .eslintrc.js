@@ -3,9 +3,6 @@ module.exports = {
   parser: 'babel-eslint',
   extends: ['airbnb', 'plugin:prettier/recommended'],
   plugins: ['react', 'prefer-object-spread', 'compat'],
-  env: {
-    browser: true,
-  },
   globals: {
     graphql: false,
   },
