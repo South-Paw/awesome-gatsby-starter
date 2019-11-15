@@ -33,10 +33,10 @@ After that you can run any of following commands
 
 ```bash
 # local development (localhost:8000)
-yarn dev
+yarn start
 
 # storybook development (localhost:9000)
-yarn dev:storybook
+yarn start:storybook
 
 # run eslint on project
 yarn lint
