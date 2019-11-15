@@ -8,7 +8,7 @@ import { StyledNavigation, Inner, Brand, Nav, Item, Social } from './styled';
 
 const items = [
   { label: 'Home', to: '/' },
-  { label: 'Markdown', to: '/markdown' },
+  { label: 'Markdown', to: '/markdown/' },
   { label: 'Storybook', href: '/docs/' },
 ];
 

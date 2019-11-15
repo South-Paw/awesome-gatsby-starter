@@ -11,25 +11,32 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.mdx', '.md'],
         defaultLayouts: {
-          // default: require.resolve('./src/components/Layout/index.js'),
+          pages: require.resolve('./src/templates/Page/index.js'),
         },
       },
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/assets`,
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
         short_name: 'starter',
@@ -62,7 +69,7 @@ module.exports = {
     // (optional) Enable the following for Google tag manager
     // https://www.gatsbyjs.org/packages/gatsby-plugin-google-tagmanager/
     // {
-    //   resolve: `gatsby-plugin-google-tagmanager`,
+    //   resolve: 'gatsby-plugin-google-tagmanager',
     //   options: {
     //     id: 'YOUR_GOOGLE_TAGMANAGER_ID',
     //     defaultDataLayer: { platform: "gatsby" },

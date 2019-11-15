@@ -9,12 +9,14 @@ const seo = {
   title: 'Home',
 };
 
-const IndexPage = ({ ...other }) => (
-  <Site seo={seo} {...other}>
-    <Container>
-      <Readme />
-    </Container>
-  </Site>
-);
+const IndexPage = ({ ...other }) => {
+  return (
+    <Site seo={seo} {...other}>
+      <Container>
+        <Readme />
+      </Container>
+    </Site>
+  );
+};
 
 export default IndexPage;

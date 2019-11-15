@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
-const SEO = ({ location: { pathname }, seo }) => {
+const SEO = ({ location: { pathname }, pathContext: { frontmatter }, seo }) => {
   const {
     site: { siteMetadata },
   } = useStaticQuery(graphql`
@@ -21,7 +21,11 @@ const SEO = ({ location: { pathname }, seo }) => {
     }
   `);
 
-  const { name, basepath, title, description, keywords, type, image } = { ...siteMetadata, ...seo };
+  const { name, basepath, title, description, keywords, type, image } = {
+    ...siteMetadata,
+    ...seo,
+    ...frontmatter,
+  };
 
   const url = `${basepath}${pathname}`;
 
@@ -49,6 +53,9 @@ SEO.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,
+  pathContext: PropTypes.shape({
+    frontmatter: PropTypes.object,
+  }),
   seo: PropTypes.shape({
     name: PropTypes.string,
     basepath: PropTypes.string,
@@ -61,6 +68,7 @@ SEO.propTypes = {
 };
 
 SEO.defaultProps = {
+  pathContext: {},
   seo: {},
 };
 
