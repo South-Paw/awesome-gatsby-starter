@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
-const SEO = ({ location: { pathname }, pathContext: { frontmatter }, seo }) => {
+const SEO = ({ location: { pathname }, pageContext: { frontmatter }, seo }) => {
   const {
     site: { siteMetadata },
   } = useStaticQuery(graphql`
