@@ -53,7 +53,7 @@ SEO.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,
-  pathContext: PropTypes.shape({
+  pageContext: PropTypes.shape({
     frontmatter: PropTypes.object,
   }),
   seo: PropTypes.shape({
@@ -68,7 +68,7 @@ SEO.propTypes = {
 };
 
 SEO.defaultProps = {
-  pathContext: {},
+  pageContext: {},
   seo: {},
 };
 
