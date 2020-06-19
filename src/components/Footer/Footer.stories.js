@@ -1,10 +1,9 @@
 import React from 'react';
-
 import { Footer } from '.';
 
 export default {
-  title: 'Components|Footer',
+  title: 'Footer',
   component: Footer,
 };
 
-export const simple = () => <Footer />;
+export const Simple = () => <Footer />;

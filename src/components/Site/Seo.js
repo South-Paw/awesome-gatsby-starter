@@ -1,9 +1,9 @@
-import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
-import Helmet from 'react-helmet';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
-const SEO = ({ location: { pathname }, pathContext: { frontmatter }, seo }) => {
+const Seo = ({ location: { pathname }, pageContext, seo }) => {
   const {
     site: { siteMetadata },
   } = useStaticQuery(graphql`
@@ -24,7 +24,7 @@ const SEO = ({ location: { pathname }, pathContext: { frontmatter }, seo }) => {
   const { name, basepath, title, description, keywords, type, image } = {
     ...siteMetadata,
     ...seo,
-    ...frontmatter,
+    ...pageContext.frontmatter,
   };
 
   const url = `${basepath}${pathname}`;
@@ -35,7 +35,7 @@ const SEO = ({ location: { pathname }, pathContext: { frontmatter }, seo }) => {
 
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords?.join(', ')} />
 
       <link rel="canonical" href={url} />
 
@@ -49,11 +49,11 @@ const SEO = ({ location: { pathname }, pathContext: { frontmatter }, seo }) => {
   );
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,
-  pathContext: PropTypes.shape({
+  pageContext: PropTypes.shape({
     frontmatter: PropTypes.object,
   }),
   seo: PropTypes.shape({
@@ -67,9 +67,9 @@ SEO.propTypes = {
   }),
 };
 
-SEO.defaultProps = {
-  pathContext: {},
+Seo.defaultProps = {
+  pageContext: {},
   seo: {},
 };
 
-export { SEO };
+export { Seo };

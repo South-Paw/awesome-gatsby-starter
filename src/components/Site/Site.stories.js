@@ -1,14 +1,13 @@
 import React from 'react';
-
 import { Site } from '.';
 
 export default {
-  title: 'Components|Site',
+  title: 'Site',
   component: Site,
 };
 
-export const simple = () => (
-  <Site seo={{}} location={{ pathname: '' }}>
+export const Simple = () => (
+  <Site path="/" location={{ pathname: '/' }} pageContext={{}}>
     [site children]
   </Site>
 );

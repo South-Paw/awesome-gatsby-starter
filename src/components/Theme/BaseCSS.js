@@ -52,4 +52,10 @@ export const BaseCSS = createGlobalStyle`
     max-width: 100%;
     overflow: auto;
   }
+
+  blockquote {
+    padding-left: 16px;
+    margin-left: 8px;
+    border-left: 4px solid rgba(0, 0, 0, 0.13)
+  }
 `;

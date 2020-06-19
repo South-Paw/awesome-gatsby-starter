@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
+const Button = styled('button')`
   padding: 4px 12px;
   margin: 0;
   background: none;
@@ -22,3 +22,9 @@ export const StyledButton = styled.button`
     background-color: #663399;
   }
 `;
+
+Button.defaultProps = {
+  type: 'button',
+};
+
+export { Button };

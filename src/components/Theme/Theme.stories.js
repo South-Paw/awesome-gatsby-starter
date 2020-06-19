@@ -1,10 +1,9 @@
 import React from 'react';
-
 import { Theme } from '.';
 
 export default {
-  title: 'UI|Theme',
+  title: 'Theme',
   component: Theme,
 };
 
-export const simple = () => <Theme>[theme children]</Theme>;
+export const Simple = () => <Theme>[theme children]</Theme>;

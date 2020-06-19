@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     name: 'Awesome Gatsby Starter',
-    basepath: 'https://awesome-gatsby-starter.netlify.com',
+    basepath: 'https://awesome-gatsby-starter.netlify.app',
     description: 'A starter for GatsbyJS with a preconfigured MDX, Storybook and ESLint environment',
     keywords: ['gatsby', 'gatsbyjs', 'gatsby starter', 'github'],
     type: 'website',
-    image: 'https://awesome-gatsby-starter.netlify.com/ok.png',
+    image: 'https://awesome-gatsby-starter.netlify.app/ok.png',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -22,7 +22,7 @@ module.exports = {
       options: {
         extensions: ['.mdx', '.md'],
         defaultLayouts: {
-          pages: require.resolve('./src/templates/Page/index.js'),
+          pages: require.resolve('./src/templates/Page.js'),
         },
       },
     },
