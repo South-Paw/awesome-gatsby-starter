@@ -1,22 +1,18 @@
 import React from 'react';
-
-import { Site } from '../components/Site';
-import { Container } from '../components/ui/Container';
-
 import Readme from '../../README.md';
+import { Container } from '../components/Container';
+import { Site } from '../components/Site';
 
 const seo = {
   title: 'Home',
 };
 
-const IndexPage = ({ ...other }) => {
-  return (
-    <Site seo={seo} {...other}>
-      <Container>
-        <Readme />
-      </Container>
-    </Site>
-  );
-};
+const IndexPage = (props) => (
+  <Site seo={seo} {...props}>
+    <Container>
+      <Readme />
+    </Container>
+  </Site>
+);
 
 export default IndexPage;

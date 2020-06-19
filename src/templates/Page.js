@@ -1,8 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-
-import { Container } from '../../components/ui/Container';
-import { Site } from '../../components/Site';
+import React from 'react';
+import { Container } from '../components/Container';
+import { Site } from '../components/Site';
 
 const Page = ({ children, ...other }) => {
   return (
@@ -13,11 +12,7 @@ const Page = ({ children, ...other }) => {
 };
 
 Page.propTypes = {
-  children: PropTypes.node,
-};
-
-Page.defaultProps = {
-  children: null,
+  children: PropTypes.node.isRequired,
 };
 
 export default Page;

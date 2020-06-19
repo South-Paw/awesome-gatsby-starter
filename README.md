@@ -1,10 +1,10 @@
-# awesome-gatsby-starter
+# @south-paw/awesome-gatsby-starter
 
 👌 A starter for GatsbyJS with a preconfigured MDX, Storybook and ESLint environment
 
 [![Netlify Status][netlify-master-status-img]][netlify-master-status]
-[![Dependencies](https://david-dm.org/South-Paw/awesome-gatsby-starter/status.svg)](https://david-dm.org/South-Paw/awesome-gatsby-starter)
-[![Dev Dependencies](https://david-dm.org/South-Paw/awesome-gatsby-starter/dev-status.svg)](https://david-dm.org/South-Paw/awesome-gatsby-starter?type=dev)
+
+> Prefer TypeScript? No worries, try [awesome-gatsby-starter-ts](https://github.com/South-Paw/awesome-gatsby-starter-ts)
 
 ## Features
 

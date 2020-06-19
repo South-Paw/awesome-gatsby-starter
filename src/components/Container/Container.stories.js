@@ -1,10 +1,9 @@
 import React from 'react';
-
 import { Container } from '.';
 
 export default {
-  title: 'UI|Container',
+  title: 'Container',
   component: Container,
 };
 
-export const simple = () => <Container>[container children]</Container>;
+export const Simple = () => <Container>[container children]</Container>;
