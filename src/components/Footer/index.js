@@ -54,7 +54,7 @@ const Right = styled(Base)`
 
 const Footer = () => (
   <Wrapper>
-    <Container maxWidth={1200}>
+    <Container>
       <Inner>
         <Left>
           <div>

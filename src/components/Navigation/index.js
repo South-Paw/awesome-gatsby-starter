@@ -123,7 +123,7 @@ const Navigation = ({ path }) => {
 
   return (
     <Wrapper>
-      <Container maxWidth={1200}>
+      <Container>
         <Inner>
           <Brand to="/">{name}</Brand>
           <Nav>

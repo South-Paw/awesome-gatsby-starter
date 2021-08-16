@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const Seo = ({ location: { pathname }, pageContext, seo }) => {
   const {
@@ -11,7 +11,7 @@ const Seo = ({ location: { pathname }, pageContext, seo }) => {
       site {
         siteMetadata {
           name
-          basepath
+          siteUrl
           description
           keywords
           type
@@ -21,13 +21,13 @@ const Seo = ({ location: { pathname }, pageContext, seo }) => {
     }
   `);
 
-  const { name, basepath, title, description, keywords, type, image } = {
+  const { name, siteUrl, title, description, keywords, type, image } = {
     ...siteMetadata,
     ...seo,
     ...pageContext.frontmatter,
   };
 
-  const url = `${basepath}${pathname}`;
+  const url = `${siteUrl}${pathname}`;
 
   return (
     <Helmet titleTemplate={`%s • ${name}`} defaultTitle={name}>
@@ -35,7 +35,7 @@ const Seo = ({ location: { pathname }, pageContext, seo }) => {
 
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords?.join(', ')} />
+      <meta name="keywords" content={keywords.join(', ')} />
 
       <link rel="canonical" href={url} />
 
@@ -58,7 +58,7 @@ Seo.propTypes = {
   }),
   seo: PropTypes.shape({
     name: PropTypes.string,
-    basepath: PropTypes.string,
+    siteUrl: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
     keywords: PropTypes.arrayOf(PropTypes.string),

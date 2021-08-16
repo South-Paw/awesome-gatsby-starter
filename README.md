@@ -8,7 +8,7 @@
 
 ## Features
 
-- [Gatsby MDX](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/) for creation of pages with Markdown + JSX
+- [Gatsby MDX](https://www.gatsbyjs.com/docs/glossary/mdx) for creation of pages with Markdown + JSX
 - [Storybook](https://storybook.js.org/) with the Storybook Docs addon and support for components that use Gatsby components such as Link and StaticQuery
 - [styled-components](https://www.styled-components.com/) for CSS-in-JS
 - [ESLint](https://eslint.org/) with [Airbnb's config](https://www.npmjs.com/package/eslint-config-airbnb)
@@ -20,7 +20,7 @@
 Install this starter (assuming you have [`gatsby-cli`](https://www.npmjs.com/package/gatsby-cli) installed) by running the following command:
 
 ```bash
-gatsby new your-projects-name https://github.com/South-Paw/awesome-gatsby-starter
+gatsby new your-projects-name https://github.com/South-Paw/awesome-gastby-starter
 ```
 
 ## Development
@@ -33,25 +33,25 @@ After that you can run any of following commands
 
 ```bash
 # local development (localhost:8000)
-yarn start
+npm run start
 
 # storybook development (localhost:9000)
-yarn start:storybook
+npm run start:storybook
 
-# run eslint on project
-yarn lint
+# run tsc and eslint on project
+npm run lint
 
 # build site for deployment (/public)
-yarn build
+npm run build
 
 # build storybook for deployment (/public/storybook)
-yarn build:storybook
+npm run build:storybook
 
 # local gatsby serve of /public
-yarn serve
+npm run serve
 
 # clean build artifacts (/.cache and /public)
-yarn clean
+npm run clean
 ```
 
 ## Issues and Bugs
@@ -60,7 +60,7 @@ If you manage to find any, please report them [here](https://github.com/South-Pa
 
 ## License
 
-MIT, see the [LICENSE](https://github.com/South-Paw/awesome-gatsby-starter/blob/master/LICENSE) file.
+0BSD, see the [LICENSE](https://github.com/South-Paw/awesome-gatsby-starter/blob/master/LICENSE) file.
 
 [netlify-master-status-img]: https://api.netlify.com/api/v1/badges/f517f897-7c3d-427a-a46f-11e07daa2d96/deploy-status
 [netlify-master-status]: https://app.netlify.com/sites/awesome-gatsby-starter/deploys
