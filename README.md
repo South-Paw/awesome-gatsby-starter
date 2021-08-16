@@ -38,7 +38,7 @@ npm run start
 # storybook development (localhost:9000)
 npm run start:storybook
 
-# run tsc and eslint on project
+# run eslint on project
 npm run lint
 
 # build site for deployment (/public)
