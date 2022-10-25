@@ -61,6 +61,13 @@ const config: GatsbyConfig = {
       __key: 'images',
     },
     'gatsby-plugin-sitemap',
+    {
+      resolve: '@chakra-ui/gatsby-plugin',
+      options: {
+        resetCSS: true,
+        isUsingColorMode: true,
+      },
+    },
   ],
 };
 
