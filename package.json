@@ -1,19 +1,28 @@
 {
-  "name": "awesome-gatsby-starter",
+  "name": "@south-paw/awesome-gatsby-starter",
   "version": "1.0.0",
-  "private": true,
   "description": "awesome-gatsby-starter",
-  "author": "Alex Gabites",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "gatsby-starter"
   ],
+  "homepage": "https://github.com/South-Paw/awesome-gatsby-starter",
+  "bugs": "https://github.com/South-Paw/awesome-gatsby-starter/issues",
+  "license": "0BSD",
+  "author": {
+    "name": "Alex Gabites",
+    "email": "hello@southpaw.co.nz",
+    "url": "http://southpaw.co.nz/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/South-Paw/awesome-gatsby-starter"
+  },
   "scripts": {
-    "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "gatsby": "^4.24.4",
