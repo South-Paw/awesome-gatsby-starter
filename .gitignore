@@ -1,13 +1,4 @@
-# project dependencies
-.cache
-node_modules
-yarn-error.log
-
-# build directory
+node_modules/
+.cache/
 public
-
-# generated folders
-coverage
-
-# OS generated files
-.DS_Store
+src/gatsby-types.d.ts
