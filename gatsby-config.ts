@@ -1,29 +1,55 @@
-import type { GatsbyConfig } from 'gatsby';
+import { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Awesome Gatsby Starter`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: 'Awesome Gatsby Starter',
+    siteUrl: 'https://awesome-gatsby-starter.netlify.app',
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: '1234abc',
-      },
-    },
-    'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
+        name: 'Awesome Gatsby Starter',
+        short_name: 'Awesome Gatsby Starter',
+        display: 'standalone',
         icon: 'src/images/icon.png',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
       },
     },
+
+    /**
+     * If you want to use Google analytics, you will need to install it
+     * with `npm i gatsby-plugin-google-analytics` and then uncomment the
+     * config below.
+     *
+     * @see https://www.gatsbyjs.com/plugins/gatsby-plugin-google-analytics
+     */
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: {
+    //     trackingId: 'UA-...',
+    //   },
+    // },
+
+    /**
+     * If you want to use Google tag manager, you will need to install it
+     * with `npm i gatsby-plugin-google-tagmanager` and then uncomment the
+     * config below.
+     *
+     * @see https://www.gatsbyjs.com/plugins/gatsby-plugin-google-tagmanager
+     */
+    // {
+    //   resolve: 'gatsby-plugin-google-tagmanager',
+    //   options: {
+    //     id: 'GTM-...',
+    //     defaultDataLayer: { platform: 'gatsby' },
+    //   },
+    // },
+
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -34,6 +60,7 @@ const config: GatsbyConfig = {
       },
       __key: 'images',
     },
+    'gatsby-plugin-sitemap',
   ],
 };
 
