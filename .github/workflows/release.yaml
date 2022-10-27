@@ -15,7 +15,6 @@ jobs:
         with:
           env: production
           step: start
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -33,10 +32,10 @@ jobs:
         run: npm run build
 
       - name: Deploy to Netlify
-        uses: netlify/actions/cli@master
+        uses: South-Paw/action-netlify-cli@v1
         id: netlify
         with:
-          args: deploy --prod --dir './public' --message 'production [${{ github.sha }}]'
+          args: deploy --json --prod --dir './public' --message 'production [${{ github.sha }}]'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -47,7 +46,6 @@ jobs:
         with:
           env: ${{ steps.deployment.outputs.env }}
           step: finish
-          token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-          env_url: ${{ steps.netlify.outputs.NETLIFY_URL }}
+          env_url: ${{ steps.netlify.outputs.NETLIFY_PROD_URL }}

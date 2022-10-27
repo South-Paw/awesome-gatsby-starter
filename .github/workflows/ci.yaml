@@ -39,7 +39,6 @@ jobs:
         with:
           env: staging
           step: start
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -57,11 +56,11 @@ jobs:
         run: npm run build
 
       - name: Deploy draft to Netlify
-        uses: netlify/actions/cli@master
+        uses: South-Paw/action-netlify-cli@v1
         id: netlify
         with:
           # all staging deployments are drafts
-          args: deploy --dir './public' --message 'staging [${{ github.sha }}]'
+          args: deploy --json --dir './public' --message 'staging [${{ github.sha }}]'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -72,8 +71,7 @@ jobs:
         with:
           env: ${{ steps.deployment.outputs.env }}
           step: finish
-          token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-          env_url: ${{ steps.netlify.outputs.NETLIFY_URL }}
+          env_url: ${{ steps.netlify.outputs.NETLIFY_DRAFT_URL }}
           override: false
