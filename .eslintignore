@@ -1,5 +1,5 @@
 .cache
-.git
+coverage
 node_modules
 public
-coverage
+src/gatsby-types.d.ts

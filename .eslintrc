@@ -1,12 +1,19 @@
 {
-  "root": true,
-  "parser": "babel-eslint",
-  "extends": ["airbnb", "plugin:prettier/recommended", "plugin:jest/recommended"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "rules": {
     "import/prefer-default-export": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/function-component-definition": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/require-default-props": "off"
   },
   "overrides": []
 }
