@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "18"
           cache: "npm"
@@ -34,7 +34,7 @@ jobs:
       - lint
     steps:
       - name: Start deployment
-        uses: bobheadxi/deployments@v0.4.3
+        uses: bobheadxi/deployments@v1
         id: deployment
         with:
           env: staging
@@ -42,10 +42,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "18"
           cache: "npm"
