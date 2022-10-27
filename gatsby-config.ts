@@ -2,8 +2,13 @@ import { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: 'Awesome Gatsby Starter',
     siteUrl: 'https://awesome-gatsby-starter.netlify.app',
+    defaultSeo: {
+      title: 'Awesome Gatsby Starter',
+      description: '👌 A starter for Gatsby 4 with TypeScript, Chakra UI, ESLint and Prettier.',
+      keywords: ['gatsby'],
+    },
+    pageTitleSeparator: ' • ',
   },
   graphqlTypegen: true,
   plugins: [
@@ -13,7 +18,7 @@ const config: GatsbyConfig = {
         name: 'Awesome Gatsby Starter',
         short_name: 'Awesome Gatsby Starter',
         display: 'standalone',
-        icon: 'src/images/icon.png',
+        icon: 'static/icon.png',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
@@ -56,10 +61,11 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: './src/assets/',
       },
       __key: 'images',
     },
+    'gatsby-plugin-remove-generator',
     'gatsby-plugin-sitemap',
     {
       resolve: '@chakra-ui/gatsby-plugin',
