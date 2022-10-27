@@ -1,7 +1,7 @@
 {
   "name": "@south-paw/awesome-gatsby-starter",
   "version": "1.0.0",
-  "description": "awesome-gatsby-starter",
+  "description": "A starter for Gatsby 4 with TypeScript, Chakra UI, ESLint and Prettier",
   "keywords": [
     "gatsby",
     "gatsby-starter"
@@ -33,7 +33,7 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "framer-motion": "^7.6.1",
-    "gatsby": "^4.24.4",
+    "gatsby": "^4.24.5",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",
     "gatsby-plugin-sharp": "^4.24.0",
@@ -41,11 +41,12 @@
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-transformer-sharp": "^4.24.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.5",
-    "@types/react": "^18.0.22",
+    "@types/node": "^18.11.7",
+    "@types/react": "^18.0.23",
     "@types/react-dom": "^18.0.7",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@typescript-eslint/parser": "^5.41.0",
@@ -58,6 +59,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gatsby-plugin-remove-generator": "^1.2.0",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.1.1",
     "typescript": "^4.8.4"
