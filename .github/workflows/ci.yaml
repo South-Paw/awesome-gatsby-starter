@@ -37,9 +37,9 @@ jobs:
         uses: bobheadxi/deployments@v0.4.3
         id: deployment
         with:
+          env: staging
           step: start
           token: ${{ secrets.GITHUB_TOKEN }}
-          env: staging
 
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -67,11 +67,13 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
       - name: Finish deployment
-        uses: bobheadxi/deployments@v0.4.3
+        uses: bobheadxi/deployments@v1
         if: always()
         with:
+          env: ${{ steps.deployment.outputs.env }}
           step: finish
           token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env_url: ${{ steps.netlify.outputs.NETLIFY_URL }}
+          override: false
